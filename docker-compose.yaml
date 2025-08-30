@@ -37,7 +37,7 @@ services:
       CONFIG_FILEPATH: /tmp/config.yml
       CONSOLE_CONFIG_FILE: |
         kafka:
-          brokers: ["broker:9092"]
+          brokers: ["kafka:9092"]
           schemaRegistry:
             enabled: true
             urls: ["http://schema-registry:8081"]
@@ -45,7 +45,7 @@ services:
           enabled: true
           clusters:
             - name: production
-              url: http://debezium:8083
+              url: http://connect:8083
     ports:
       - "9080:8080"
 
