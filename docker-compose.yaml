@@ -89,7 +89,7 @@ services:
       STATUS_STORAGE_TOPIC: connect_statuses
       ENABLE_DEBEZIUM_SCRIPTING: "true"
       CONNECT_REST_ADVERTISED_HOST_NAME: connect
-      CONNECT_PLUGIN_PATH: /kafka/connect
+      CONNECT_PLUGIN_PATH: /kafka/connect/clickhouse-kafka-connect
       # Avro Converters
       KEY_CONVERTER: io.confluent.connect.avro.AvroConverter
       KEY_CONVERTER_SCHEMA_REGISTRY_URL: http://schema-registry:8081
