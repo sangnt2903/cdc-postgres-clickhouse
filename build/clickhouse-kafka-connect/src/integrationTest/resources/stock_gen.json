@@ -1,0 +1,16 @@
+{
+  "name": "%s",
+  "config": {
+    "name": "%s",
+    "connector.class": "io.confluent.kafka.connect.datagen.DatagenConnector",
+    "tasks.max": "%d",
+    "kafka.topic": "%s",
+    "max.interval": "100",
+    "iterations": "%d",
+    "quickstart": "Stock_Trades"
+  }
+}
+
+
+
+
