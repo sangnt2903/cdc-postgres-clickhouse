@@ -1,7 +1,7 @@
 #! /bin/bash
 
 echo "Building custom connect image..."
-docker build -t debezium/custom-connect:latest connect.Dockfile .
+docker build -t debezium/custom-connect:latest .
 echo "[v] Image: debezium/custom-connect:latest"
 
 mkdir -p plugins
