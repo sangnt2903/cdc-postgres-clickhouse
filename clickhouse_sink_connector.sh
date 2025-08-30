@@ -8,11 +8,10 @@ curl -X POST http://localhost:8083/connectors -H "Content-Type: application/json
     "clickhouse.database": "default",
     "clickhouse.user": "default",
     "clickhouse.password": "",
-
+    "hostname":"clickhouse-sink-conector",
     "auto.create.tables": "true",
     "auto.evolve": "true",
     "insert.mode": "insert",
-
     "key.converter": "io.confluent.connect.avro.AvroConverter",
     "key.converter.schema.registry.url": "http://schema-registry:8081",
     "value.converter": "io.confluent.connect.avro.AvroConverter",

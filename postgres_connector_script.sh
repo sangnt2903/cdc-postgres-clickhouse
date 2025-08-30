@@ -8,6 +8,7 @@ curl -X POST http://localhost:8083/connectors -H "Content-Type: application/json
     "database.password": "postgres",
     "database.dbname": "mydb",
     "database.server.name": "pgserver1",
+    "topic.prefix": "mydb",
     "table.include.list": "public.customer,public.orders",
     "plugin.name": "pgoutput",
     "key.converter": "io.confluent.connect.avro.AvroConverter",

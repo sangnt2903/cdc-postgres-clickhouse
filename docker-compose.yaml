@@ -17,7 +17,6 @@ services:
       - zookeeper
     ports:
       - "9092:9092"
-      - "29092:29092"
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
@@ -28,6 +27,9 @@ services:
 
   console:
     image: docker.redpanda.com/redpandadata/console:v2.3.8
+    container_name: kafka-ui
+    depends_on:
+      - kafka
     restart: on-failure
     entrypoint: /bin/sh
     command: -c "echo \"$$CONSOLE_CONFIG_FILE\" > /tmp/config.yml; /app/console"
@@ -35,7 +37,7 @@ services:
       CONFIG_FILEPATH: /tmp/config.yml
       CONSOLE_CONFIG_FILE: |
         kafka:
-          brokers: ["broker:29092"]
+          brokers: ["broker:9092"]
           schemaRegistry:
             enabled: true
             urls: ["http://schema-registry:8081"]
