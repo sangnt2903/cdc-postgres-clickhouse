@@ -11,13 +11,14 @@ curl -X POST http://localhost:8083/connectors -H "Content-Type: application/json
     "hostname":"clickhouse",
     "port":"8123",
     "ssl": "false",
-    "schema.registry.url": "http://schema-registry:8081",
     "auto.create.tables": "true",
     "auto.evolve": "true",
     "insert.mode": "insert",
     "key.converter": "io.confluent.connect.avro.AvroConverter",
     "key.converter.schema.registry.url": "http://schema-registry:8081",
+    "key.converter.schemas.enable": "true",
     "value.converter": "io.confluent.connect.avro.AvroConverter",
-    "value.converter.schema.registry.url": "http://schema-registry:8081"
+    "value.converter.schema.registry.url": "http://schema-registry:8081",
+    "value.converter.schemas.enable": "true",
   }
 }'
